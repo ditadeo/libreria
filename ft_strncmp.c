@@ -1,48 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   strncmp.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ditadeo- <ditadeo-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/13 15:20:14 by ditadeo-          #+#    #+#             */
-/*   Updated: 2022/12/15 15:49:01 by ditadeo-         ###   ########.fr       */
+/*   Created: 2022/12/28 16:07:30 by ditadeo-          #+#    #+#             */
+/*   Updated: 2022/12/28 16:49:11 by ditadeo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t len)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t		count;
-	char		*dest;
-	const char	*source;
+	size_t	count;
 
 	count = 0;
-	dest = dst;
-	source = src;
-	if (dst == NULL && src == NULL)
+	if (n == 0)
+		return (0);
+	while (s1[count] && s1[count] == s2[count] && n - 1 > count)
 	{
-		return (NULL);
-	}
-	while (count < len)
-	{
-		dest[count] = source[count];
 		count++;
 	}
-	return (dest);
+	return ((unsigned char)s1[count] - (unsigned char)s2[count]);
 }
 /*
 #include <stdio.h>
 int	main()
 {
-	const char	src[50] = "Hello guys!";
-	char	dest[50];
-
-	strcpy(dest,"Helloooooooooooooo");
-	printf("Before memcpy dest = %s\n", dest);
-	ft_memcpy(dest, src, strlen(src)+1);
-	printf("After memcpy dest = %s\n", dest);
-	return(0);
-}
-*/
+	printf("%d", ft_strncmp("Hi", "Guys", 1));
+}*/

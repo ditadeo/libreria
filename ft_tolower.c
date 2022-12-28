@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ditadeo- <ditadeo-@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: ditadeo- <ditadeo-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/30 12:45:38 by ditadeo-          #+#    #+#             */
-/*   Updated: 2022/12/13 15:58:56 by ditadeo-         ###   ########.fr       */
+/*   Created: 2022/12/28 14:17:40 by ditadeo-          #+#    #+#             */
+/*   Updated: 2022/12/28 14:38:12 by ditadeo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
+#include <ctype.h>
 
-int	ft_isalpha(int a)
+int	ft_tolower(int c)
 {
-	if ((a >= 65 & a <= 90) || (a >= 97 & a <= 122))
+	if (c >= 'A' && c <= 'Z')
 	{
-		return (1);
+		return (c - 'A' + 'a');
 	}
-	return (0);
+	return (c);
 }
 /*
+#include <stdio.h>
 int main()
 {
-	char    a; 
-	a = 'a';
-	printf("%d", ft_isalpha(a));
-}
-*/
+    char    c;
+
+    c = 'D';
+    printf("%c\n", ft_tolower(c));
+    return (0);
+}*/

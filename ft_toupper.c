@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ditadeo- <ditadeo-@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: ditadeo- <ditadeo-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/30 12:45:38 by ditadeo-          #+#    #+#             */
-/*   Updated: 2022/12/13 15:58:56 by ditadeo-         ###   ########.fr       */
+/*   Created: 2022/12/28 13:29:35 by ditadeo-          #+#    #+#             */
+/*   Updated: 2022/12/28 14:17:19 by ditadeo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
+#include <ctype.h>
 
-int	ft_isalpha(int a)
+int	ft_toupper(int c)
 {
-	if ((a >= 65 & a <= 90) || (a >= 97 & a <= 122))
+	if (c >= 'a' && c <= 'z')
 	{
-		return (1);
+		return (c - 'a' + 'A');
 	}
-	return (0);
+	return (c);
 }
 /*
-int main()
+#include <stdio.h>
+int	main()
 {
-	char    a; 
-	a = 'a';
-	printf("%d", ft_isalpha(a));
-}
-*/
+	char	c;
+	
+	c = 'p';
+	printf("%c\n", ft_toupper(c));
+	return (0);
+}*/
