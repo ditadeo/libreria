@@ -6,7 +6,7 @@
 /*   By: ditadeo- <ditadeo-@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 14:04:11 by ditadeo-          #+#    #+#             */
-/*   Updated: 2022/12/28 16:46:27 by ditadeo-         ###   ########.fr       */
+/*   Updated: 2022/12/29 13:00:52 by ditadeo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,7 @@ int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strnstr(const char *bottle, const char *glass, size_t len);
 #endif
